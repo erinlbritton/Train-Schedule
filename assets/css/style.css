@@ -1,0 +1,13 @@
+.subway {
+    width: 10%;
+    height: 10%;
+}
+
+.subwayIcons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.remove:hover {
+    cursor: pointer;
+}

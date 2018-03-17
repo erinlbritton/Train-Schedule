@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+
+    <!-- Moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.js"></script>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Train Schedule</title>
+</head>
+<body>
+<!-- <div id="datetime"></div>   -->
+<!-- <div id="arrival"></div>
+<div id="minutes"></div>      -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <h2 class="sub-header text-center">Train Schedule</h3>
+            <h3 class="sub-header text-center"><div id="datetime"></div></h3>
+            <div class="subwayIcons">
+                <img class="subway" src="assets/images/beijing.png" title="Beijing">
+                <img class="subway" src="assets/images/london.png" title="London">
+                <img class="subway" src="assets/images/new-york.png" title="New York">
+                <img class="subway" src="assets/images/moscow.png" title="Moscow">
+                <img class="subway" src="assets/images/seoul.png" title="Seoul">
+                <img class="subway" src="assets/images/paris.png" title="Paris">
+                <img class="subway" src="assets/images/tokyo.png" title="Tokyo">
+            </div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Train</th>
+                        <th>Destination</th>
+                        <th>Frequency (min)</th>
+                        <th>Next Train Arrival</th>
+                        <th>Time to Arrival</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody id="tableContent">
+                </tbody>
+            </table>   
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-default">
+                <div class="panel-heading panel-header-text">Add a Train</div>
+                    <div class="panel-body panel-text">
+                        <form>
+                            <div class="form-group">
+                                <label for="trainName">Train</label>
+                                <input type="text" class="form-control" id="trainName">
+                            </div>
+                            <div class="form-group">
+                                <label for="trainDestination">Destination</label>
+                                <input type="text" class="form-control" id="trainDestination">
+                            </div>
+                            <div class="form-group">
+                                <label for="trainTime">First Train Departure (hh:mm AM)</label>
+                                <input type="time" class="form-control" id="trainTime">
+                            </div>
+                            <div class="form-group">
+                                <label for="trainFrequency">Frequency (min)</label>
+                                <input type="number" class="form-control" id="trainFrequency">
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="addBtn">Add</button>
+                        </form> 
+                    </div>
+            </div>
+        </div>
+    </div>
+<footer class="footer small text-right"><a href="http://transitoriented.design/mini-metro-maps/">Mini Metros</a> by Peter Dovak</footer>
+</div>
+<script src="assets/javascript/app.js"></script>
+</body>
+</html>
