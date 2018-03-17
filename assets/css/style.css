@@ -1,3 +1,12 @@
+
+.glyphicon-remove:hover {
+    color: red;
+}
+
+.remove:hover, .subway:hover {
+    cursor: pointer;
+}
+
 .subway {
     width: 10%;
     height: 10%;
@@ -6,8 +15,4 @@
 .subwayIcons {
     display: flex;
     justify-content: space-between;
-}
-
-.remove:hover {
-    cursor: pointer;
 }
